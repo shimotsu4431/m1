@@ -76,7 +76,7 @@ const members: member[] = [
 const CardList: React.FC = () => {
   const [val, setVal] = useState([])
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: HTMLInputElement) => {
     if (val.includes(e.target.value)) {
       setVal(val.filter(item => item !== e.target.value));
     } else {
