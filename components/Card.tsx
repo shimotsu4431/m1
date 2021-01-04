@@ -17,7 +17,6 @@ const Card: React.FC<Props> = ({ id, name, checked, handleChange }) => {
         "justify-center": true,
         "items-center": true,
         "text-3xl": true,
-        "text-gray-800": true,
         "mb-4": true,
         "mx-2": true,
         "w-36": true,
@@ -26,7 +25,9 @@ const Card: React.FC<Props> = ({ id, name, checked, handleChange }) => {
         "border-gray-400": true,
         "bg-gray-200": true,
         "cursor-pointer": true,
-        "bg-gray-400" : checked
+        "bg-gray-400" : checked,
+        "text-gray-800": !checked,
+        "text-gray-100" : checked
       })} htmlFor={JSON.stringify(id)}>{name}</label>
     </>
   )
