@@ -11,9 +11,7 @@ const useSelect = () => {
     }
   };
 
-  console.log(val)
-
-  return { val, handleChange }
+  return { val, setVal, handleChange }
 }
 
 export default useSelect
