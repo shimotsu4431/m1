@@ -8,6 +8,7 @@ const Home: React.FC = () => {
 
   const handleClick = useCallback(() => {
     alert(val)
+    setVal([])
   },[val])
 
   return (

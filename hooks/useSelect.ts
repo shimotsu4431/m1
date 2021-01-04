@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useSelect = () => {
-  const [val, setVal] = useState(["AAA"])
+  const [val, setVal] = useState([])
 
   const handleChange = (e: HTMLInputElement) => {
     if (val.includes(e.target.value)) {

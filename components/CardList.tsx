@@ -10,67 +10,67 @@ export type member = {
 const members: member[] = [
   {
     id: 1,
-    name: "AAA",
+    name: "A",
   },
   {
     id: 2,
-    name: "BBB",
+    name: "B",
   },
   {
     id: 3,
-    name: "CCC",
+    name: "C",
   },
   {
     id: 4,
-    name: "DDD",
+    name: "D",
   },
   {
     id: 5,
-    name: "EEE",
+    name: "E",
   },
   {
     id: 6,
-    name: "FFF",
+    name: "F",
   },
   {
     id: 7,
-    name: "GGG",
+    name: "G",
   },
   {
     id: 8,
-    name: "HHH",
+    name: "H",
   },
   {
     id: 9,
-    name: "III",
+    name: "I",
   },
   {
     id: 10,
-    name: "JJJ",
+    name: "J",
   },
   {
     id: 11,
-    name: "KKK",
+    name: "K",
   },
   {
     id: 12,
-    name: "LLL",
+    name: "L",
   },
   {
     id: 13,
-    name: "MMM",
+    name: "M",
   },
   {
     id: 14,
-    name: "NNN",
+    name: "N",
   },
   {
     id: 15,
-    name: "OOO",
+    name: "O",
   },
   {
     id: 16,
-    name: "PPP",
+    name: "P",
   }
 ]
 
