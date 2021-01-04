@@ -1,8 +1,15 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useCallback } from 'react'
 import CardList from '../components/CardList'
+import useSelect from '../hooks/useSelect'
 
 const Home: React.FC = () => {
+  const { val, handleChange } = useSelect()
+
+  const handleClick = useCallback(() => {
+    alert(val)
+  },[val])
+
   return (
     <div>
       <Head>
@@ -17,10 +24,11 @@ const Home: React.FC = () => {
           </h1>
           <h2 className="text-center text-xl tracking-wide text-gray-400">M-1敗者復活戦風のUIを作ってみる。Tailwindも使ってみるよ。</h2>
         </section>
-        <section>
-        {/* <h2 className="text-center text-2xl font-bold mb-4">選択肢一覧</h2>
-        <h3 className="text-center text-base tracking-wide mb-6 text-gray-400">以下の選択肢から選んでください。</h3> */}
-        <CardList></CardList>
+        <section className="mb-6">
+        <CardList val={val} handleChange={handleChange}></CardList>
+      </section>
+      <section className="flex justify-center">
+        <button onClick={() => handleClick()} className="uppercase px-8 py-2 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">送信</button>
       </section>
       </main>
     </div>

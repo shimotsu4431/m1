@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import useSelect from '../hooks/useSelect'
 import Card from './Card'
 
 export type member = {
@@ -73,23 +74,18 @@ const members: member[] = [
   }
 ]
 
-const CardList: React.FC = () => {
-  const [val, setVal] = useState([])
+type Props = {
+  val: string[],
+  handleChange: (e: HTMLInputElement) => void
+}
 
-  const handleChange = (e: HTMLInputElement) => {
-    if (val.includes(e.target.value)) {
-      setVal(val.filter(item => item !== e.target.value));
-    } else {
-      setVal([...val, e.target.value]);
-    }
-  };
-
+const CardList: React.FC<Props> = ({val, handleChange}) => {
   return (
     <>
       <p className="text-center mb-6">選択中: {val.join(", ")}</p>
       <div className="flex flex-wrap justify-center content-between w-full max-w-screen-md mx-auto">
         {members.length > 0 && members.map((item) => {
-          return ( <Card id={item.id} name={item.name} key={item.id} checked={val.includes(item.name)} handleChange={handleChange}></Card>)
+          return (<Card id={item.id} name={item.name} key={item.id} checked={val.includes(item.name)} handleChange={handleChange} />)
         })}
       </div>
     </>
