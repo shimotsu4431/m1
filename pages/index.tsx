@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import Head from 'next/head'
 import React, { useCallback } from 'react'
 import CardList from '../components/CardList'
@@ -30,7 +31,20 @@ const Home: React.FC = () => {
       </section>
       <section className="flex justify-center">
         <button onClick={() => setVal([])} className="uppercase px-8 py-2 mr-4 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">リセット</button>
-        <button onClick={() => handleClick()} disabled={val.length <= 2} className="uppercase px-8 py-2 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">送信</button>
+        <button onClick={() => handleClick()} disabled={val.length <= 2} className={clsx({
+          "uppercase": true,
+          "px-8": true,
+          "py-2": true,
+          "border": true,
+          "border-blue-300": val.length <= 2,
+          "border-blue-600": val.length === 3,
+          "text-blue-300": val.length <= 2,
+          "text-blue-600": val.length === 3,
+          "max-w-max": true,
+          "shadow-sm": true,
+          "hover:shadow-md": val.length === 3,
+          "cursor-not-allowed": val.length <= 2
+        })}>送信</button>
       </section>
       </main>
     </div>
