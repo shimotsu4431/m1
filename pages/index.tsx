@@ -29,8 +29,8 @@ const Home: React.FC = () => {
         <CardList val={val} handleChange={handleChange}></CardList>
       </section>
       <section className="flex justify-center">
-        <button onClick={() => setVal([])} className="uppercase px-8 py-2 mr-4 border border-blue-300 text-blue-300 max-w-max shadow-sm hover:shadow-md">リセット</button>
-        <button onClick={() => handleClick()} className="uppercase px-8 py-2 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">送信</button>
+        <button onClick={() => setVal([])} className="uppercase px-8 py-2 mr-4 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">リセット</button>
+        <button onClick={() => handleClick()} disabled={val.length <= 2} className="uppercase px-8 py-2 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">送信</button>
       </section>
       </main>
     </div>
