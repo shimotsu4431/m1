@@ -7,6 +7,7 @@ const useSelect = () => {
     if (val.includes(e.target.value)) {
       setVal(val.filter(item => item !== e.target.value));
     } else {
+      if (val.length >= 3) return
       setVal([...val, e.target.value]);
     }
   };
