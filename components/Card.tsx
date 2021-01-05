@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { ChangeEvent } from 'react'
 import clsx from "clsx"
 
 type Props = {
   id: number,
   name: string,
   checked: boolean,
-  handleChange: (e: any) => void,
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
 }
 
 const Card: React.FC<Props> = ({ id, name, checked, handleChange }) => {

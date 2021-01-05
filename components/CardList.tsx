@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import useSelect from '../hooks/useSelect'
+import React, { ChangeEvent, useState } from 'react'
 import Card from './Card'
 
 export type member = {
@@ -76,7 +75,7 @@ const members: member[] = [
 
 type Props = {
   val: string[],
-  handleChange: (e: HTMLInputElement) => void
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
 const CardList: React.FC<Props> = ({val, handleChange}) => {

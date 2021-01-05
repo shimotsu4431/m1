@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 const useSelect = () => {
   const [val, setVal] = useState([])
 
-  const handleChange = (e: HTMLInputElement) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (val.includes(e.target.value)) {
       setVal(val.filter(item => item !== e.target.value));
     } else {
