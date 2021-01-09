@@ -5,7 +5,6 @@ import Card from './Card'
 export type member = {
   id: number,
   name: string,
-  src: string
 }
 
 type Props = {
