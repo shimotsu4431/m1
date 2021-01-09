@@ -36,7 +36,7 @@ const useSelect = () => {
 
   },[])
 
-  return { selectedMember, setSelectedMember, handleChange, handleReset, handleRandom }
+  return { selectedMember, handleChange, handleReset, handleRandom }
 }
 
 export default useSelect

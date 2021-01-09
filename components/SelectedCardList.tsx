@@ -12,7 +12,7 @@ type Props = {
 const SelectedCardList: React.FC<Props> = ({selectedMember, handleChange}) => {
   return (
     <>
-      <div className="flex flex-wrap justify-center content-between w-full max-w-screen-md mx-auto h-36">
+      <div className="flex flex-wrap justify-center content-between w-full max-w-screen-md mx-auto">
         {selectedMember.length && selectedMember[0] ? <Card id={selectedMember[0].id} name={selectedMember[0].name} key={selectedMember[0].id} checked={selectedMember.includes(selectedMember[0])} handleChange={handleChange} isSelected/> :<EmptyCard />}
         {selectedMember.length && selectedMember[1] ? <Card id={selectedMember[1].id} name={selectedMember[1].name} key={selectedMember[1].id} checked={selectedMember.includes(selectedMember[1])} handleChange={handleChange} isSelected /> :<EmptyCard />}
         {selectedMember.length && selectedMember[2] ? <Card id={selectedMember[2].id} name={selectedMember[2].name} key={selectedMember[2].id} checked={selectedMember.includes(selectedMember[2])} handleChange={handleChange} isSelected /> :<EmptyCard />}
