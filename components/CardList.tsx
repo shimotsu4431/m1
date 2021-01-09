@@ -18,7 +18,7 @@ const CardList: React.FC<Props> = ({selectedMember, handleChange}) => {
     <>
       <div className="flex flex-wrap justify-center content-between w-full max-w-screen-lg mx-auto">
         {members.length > 0 && members.map((item) => {
-          return (<Card id={item.id} name={item.name} src={item.src} key={item.id} checked={selectedMember.includes(item)} handleChange={handleChange} />)
+          return (<Card id={item.id} name={item.name} key={item.id} checked={selectedMember.includes(item)} handleChange={handleChange} />)
         })}
       </div>
     </>
