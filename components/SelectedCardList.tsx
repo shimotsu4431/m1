@@ -1,13 +1,8 @@
 import React, { ChangeEvent, useMemo, useState } from 'react'
-import members from '../config/members'
 import Card from './Card'
+import { member } from './CardList'
 import EmptyCard from './EmptyCard'
 
-export type member = {
-  id: number,
-  name: string,
-  src: string
-}
 
 type Props = {
   selectedMember: member[],
