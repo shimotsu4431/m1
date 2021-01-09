@@ -9,7 +9,11 @@ const Home: React.FC = () => {
   const { selectedMember, handleChange, handleReset, handleRandom } = useSelect()
 
   const handleSend = useCallback(() => {
-    alert(selectedMember)
+    let sendMessage = ""
+    selectedMember.forEach((item) => {
+      sendMessage += item.name + ", "
+    })
+    alert("select: " + sendMessage)
     handleReset()
   },[selectedMember])
 
