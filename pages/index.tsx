@@ -7,7 +7,7 @@ import useSelect, { CARD_NUM } from '../hooks/useSelect'
 const Home: React.FC = () => {
   const { val, handleChange, handleReset, handleRandom } = useSelect()
 
-  const handleClick = useCallback(() => {
+  const handleSend = useCallback(() => {
     alert(val)
     handleReset()
   },[val])
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
       <section className="flex justify-center">
         <button onClick={() => handleReset()} className="uppercase px-8 py-2 mr-4 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">リセット</button>
         <button onClick={() => handleRandom()} className="uppercase px-8 py-2 mr-4 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">ランダムでセット</button>
-        <button onClick={() => handleClick()} disabled={val.length < CARD_NUM} className={clsx({
+        <button onClick={() => handleSend()} disabled={val.length < CARD_NUM} className={clsx({
           "uppercase": true,
           "px-8": true,
           "py-2": true,

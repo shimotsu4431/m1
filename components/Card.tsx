@@ -4,11 +4,12 @@ import clsx from "clsx"
 type Props = {
   id: number,
   name: string,
+  src: string,
   checked: boolean,
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
 }
 
-const Card: React.FC<Props> = ({ id, name, checked, handleChange }) => {
+const Card: React.FC<Props> = ({ id, name, src, checked, handleChange }) => {
   return (
     <>
       <input className="hidden" type="checkbox" value={name} id={JSON.stringify(id)} checked={checked} onChange={handleChange} />
@@ -21,14 +22,14 @@ const Card: React.FC<Props> = ({ id, name, checked, handleChange }) => {
         "mx-2": true,
         "w-36": true,
         "h-36": true,
-        "border-2": true,
-        "border-gray-400": true,
+        "border-4": true,
         "bg-gray-200": true,
         "cursor-pointer": true,
-        "bg-gray-400" : checked,
-        "text-gray-800": !checked,
-        "text-gray-100" : checked
-      })} htmlFor={JSON.stringify(id)}>{name}</label>
+        "border-red-600": checked,
+        "opacity-40": checked,
+      })} htmlFor={JSON.stringify(id)}>
+        <img className="w-36 h-36" src={src} alt=""/>
+      </label>
     </>
   )
 }

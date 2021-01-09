@@ -3,68 +3,104 @@ import { member } from "../components/CardList"
 const members: member[] = [
   {
     id: 1,
-    name: "A",
+    name: "luffy",
+    src: "/01.png"
   },
   {
     id: 2,
-    name: "B",
+    name: "zoro",
+    src: "/02.png"
   },
   {
     id: 3,
-    name: "C",
+    name: "nami",
+    src: "/03.png"
   },
   {
     id: 4,
-    name: "D",
+    name: "sogeking",
+    src: "/04.png"
   },
   {
     id: 5,
-    name: "E",
+    name: "sanji",
+    src: "/05.png"
   },
   {
     id: 6,
-    name: "F",
+    name: "chopper",
+    src: "/06.png"
   },
   {
     id: 7,
-    name: "G",
+    name: "robin",
+    src: "/07.png"
   },
   {
     id: 8,
-    name: "H",
+    name: "franky",
+    src: "/08.png"
   },
   {
     id: 9,
-    name: "I",
+    name: "brook",
+    src: "/09.png"
   },
   {
     id: 10,
-    name: "J",
+    name: "jinbe",
+    src: "/10.png"
   },
   {
     id: 11,
-    name: "K",
+    name: "arlong",
+    src: "/11.png"
   },
   {
     id: 12,
-    name: "L",
+    name: "buggy",
+    src: "/12.png"
   },
   {
     id: 13,
-    name: "M",
+    name: "crocodile",
+    src: "/13.png"
   },
   {
     id: 14,
-    name: "N",
+    name: "enel",
+    src: "/14.png"
   },
   {
     id: 15,
-    name: "O",
+    name: "lucci",
+    src: "/15.png"
   },
   {
     id: 16,
-    name: "P",
-  }
+    name: "moria",
+    src: "/16.png"
+  },
+  {
+    id: 17,
+    name: "doflamingo",
+    src: "/17.png"
+  },
+  {
+    id: 18,
+    name: "linlin & kaido",
+    src: "/18.png"
+  },
+  {
+    id: 19,
+    name: "kurohige",
+    src: "/19.png"
+  },
+  {
+    id: 20,
+    name: "santaisyou",
+    src: "/20.png"
+  },
 ]
 
 export default members
