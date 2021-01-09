@@ -61,46 +61,46 @@ const members: member[] = [
     name: "buggy",
     src: "/12.png"
   },
-  {
-    id: 13,
-    name: "crocodile",
-    src: "/13.png"
-  },
-  {
-    id: 14,
-    name: "enel",
-    src: "/14.png"
-  },
-  {
-    id: 15,
-    name: "lucci",
-    src: "/15.png"
-  },
-  {
-    id: 16,
-    name: "moria",
-    src: "/16.png"
-  },
-  {
-    id: 17,
-    name: "doflamingo",
-    src: "/17.png"
-  },
-  {
-    id: 18,
-    name: "linlin & kaido",
-    src: "/18.png"
-  },
-  {
-    id: 19,
-    name: "kurohige",
-    src: "/19.png"
-  },
-  {
-    id: 20,
-    name: "santaisyou",
-    src: "/20.png"
-  },
+  // {
+  //   id: 13,
+  //   name: "crocodile",
+  //   src: "/13.png"
+  // },
+  // {
+  //   id: 14,
+  //   name: "enel",
+  //   src: "/14.png"
+  // },
+  // {
+  //   id: 15,
+  //   name: "lucci",
+  //   src: "/15.png"
+  // },
+  // {
+  //   id: 16,
+  //   name: "moria",
+  //   src: "/16.png"
+  // },
+  // {
+  //   id: 17,
+  //   name: "doflamingo",
+  //   src: "/17.png"
+  // },
+  // {
+  //   id: 18,
+  //   name: "linlin & kaido",
+  //   src: "/18.png"
+  // },
+  // {
+  //   id: 19,
+  //   name: "kurohige",
+  //   src: "/19.png"
+  // },
+  // {
+  //   id: 20,
+  //   name: "santaisyou",
+  //   src: "/20.png"
+  // },
 ]
 
 export default members

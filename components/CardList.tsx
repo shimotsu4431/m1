@@ -9,17 +9,16 @@ export type member = {
 }
 
 type Props = {
-  val: string[],
+  val: member[],
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
 const CardList: React.FC<Props> = ({val, handleChange}) => {
   return (
     <>
-      <p className="text-center mb-6">選択中: {val.join(", ")}</p>
-      <div className="flex flex-wrap justify-center content-between w-full max-w-screen-md mx-auto">
+      <div className="flex flex-wrap justify-center content-between w-full max-w-screen-lg mx-auto">
         {members.length > 0 && members.map((item) => {
-          return (<Card id={item.id} name={item.name} src={item.src} key={item.id} checked={val.includes(item.name)} handleChange={handleChange} />)
+          return (<Card id={item.id} name={item.name} src={item.src} key={item.id} checked={val.includes(item)} handleChange={handleChange} />)
         })}
       </div>
     </>

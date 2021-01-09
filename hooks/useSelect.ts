@@ -1,19 +1,24 @@
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import { shuffle } from 'lodash'
 import members from "../config/members";
+import { member } from "../components/CardList";
 
 export const CARD_NUM = 3
 
 const useSelect = () => {
-  const [val, setVal] = useState([])
+  const [val, setVal] = useState<member[]>([])
 
   /** カードを登録する */
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (val.includes(e.target.value)) {
-      setVal(val.filter(item => item !== e.target.value));
+    const idArray = val.map((item) => JSON.stringify(item.id))
+
+    if (idArray.includes(e.target.id)) {
+      setVal(val.filter(item => JSON.stringify(item.id) !== e.target.id));
     } else {
       if (val.length >= CARD_NUM) return
-      setVal([...val, e.target.value]);
+
+      const selected = members.filter(item => e.target.id === JSON.stringify(item.id))[0]
+      setVal([...val, selected]);
     }
   };
 
@@ -26,11 +31,8 @@ const useSelect = () => {
   const handleRandom = useCallback(() => {
     handleReset()
 
-    const selectedArray = shuffle(members).slice(1, CARD_NUM + 1)
-    const selectedValue = selectedArray.map((item) => {
-      return item.name
-    })
-    setVal(selectedValue)
+    const shuffledArray = shuffle(members).slice(1, CARD_NUM + 1)
+    setVal(shuffledArray)
 
   },[])
 

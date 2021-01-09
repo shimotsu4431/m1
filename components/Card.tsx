@@ -26,7 +26,6 @@ const Card: React.FC<Props> = ({ id, name, src, checked, handleChange }) => {
         "bg-gray-200": true,
         "cursor-pointer": true,
         "border-red-600": checked,
-        "opacity-40": checked,
       })} htmlFor={JSON.stringify(id)}>
         <img className="w-36 h-36" src={src} alt=""/>
       </label>
