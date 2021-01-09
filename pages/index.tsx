@@ -5,7 +5,7 @@ import CardList from '../components/CardList'
 import useSelect from '../hooks/useSelect'
 
 const Home: React.FC = () => {
-  const { val, handleChange, handleReset } = useSelect()
+  const { val, handleChange, handleReset, handleRandom } = useSelect()
 
   const handleClick = useCallback(() => {
     alert(val)
@@ -31,6 +31,7 @@ const Home: React.FC = () => {
       </section>
       <section className="flex justify-center">
         <button onClick={() => handleReset()} className="uppercase px-8 py-2 mr-4 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">リセット</button>
+        <button onClick={() => handleRandom()} className="uppercase px-8 py-2 mr-4 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">ランダムでセット</button>
         <button onClick={() => handleClick()} disabled={val.length <= 2} className={clsx({
           "uppercase": true,
           "px-8": true,

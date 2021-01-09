@@ -1,4 +1,6 @@
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
+import { shuffle } from 'lodash'
+import members from "../config/members";
 
 const useSelect = () => {
   const [val, setVal] = useState([])
@@ -16,7 +18,18 @@ const useSelect = () => {
     setVal([])
   },[])
 
-  return { val, setVal, handleChange, handleReset }
+  const handleRandom = useCallback(() => {
+    handleReset()
+
+    const selectedArray = shuffle(members).slice(1, 4)
+    const selectedValue = selectedArray.map((item) => {
+      return item.name
+    })
+    setVal(selectedValue)
+
+  },[])
+
+  return { val, setVal, handleChange, handleReset, handleRandom }
 }
 
 export default useSelect
