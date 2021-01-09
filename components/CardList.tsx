@@ -9,16 +9,16 @@ export type member = {
 }
 
 type Props = {
-  val: member[],
+  selectedMember: member[],
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
-const CardList: React.FC<Props> = ({val, handleChange}) => {
+const CardList: React.FC<Props> = ({selectedMember, handleChange}) => {
   return (
     <>
       <div className="flex flex-wrap justify-center content-between w-full max-w-screen-lg mx-auto">
         {members.length > 0 && members.map((item) => {
-          return (<Card id={item.id} name={item.name} src={item.src} key={item.id} checked={val.includes(item)} handleChange={handleChange} />)
+          return (<Card id={item.id} name={item.name} src={item.src} key={item.id} checked={selectedMember.includes(item)} handleChange={handleChange} />)
         })}
       </div>
     </>
