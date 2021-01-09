@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useCallback, useEffect, useState } from "react";
 
 const useSelect = () => {
   const [val, setVal] = useState([])
@@ -12,7 +12,11 @@ const useSelect = () => {
     }
   };
 
-  return { val, setVal, handleChange }
+  const handleReset = useCallback(() => {
+    setVal([])
+  },[])
+
+  return { val, setVal, handleChange, handleReset }
 }
 
 export default useSelect

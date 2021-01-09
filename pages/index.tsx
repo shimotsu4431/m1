@@ -5,16 +5,12 @@ import CardList from '../components/CardList'
 import useSelect from '../hooks/useSelect'
 
 const Home: React.FC = () => {
-  const { val, setVal, handleChange } = useSelect()
+  const { val, handleChange, handleReset } = useSelect()
 
   const handleClick = useCallback(() => {
     alert(val)
     handleReset()
   },[val])
-
-  const handleReset = useCallback(() => {
-    setVal([])
-  },[])
 
   return (
     <div>
