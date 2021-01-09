@@ -15,6 +15,8 @@ type Props = {
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
+const noop = () => {}
+
 const SelectedCardList: React.FC<Props> = ({selectedMember, handleChange}) => {
   return (
     <>
@@ -23,7 +25,7 @@ const SelectedCardList: React.FC<Props> = ({selectedMember, handleChange}) => {
           const items = []
           for (let i = 0; i < CARD_NUM; i ++) {
             selectedMember && selectedMember[i] ?
-            items.push(<Card id={selectedMember[i].id} name={selectedMember[i].name} src={selectedMember[i].src} key={selectedMember[i].id} checked={selectedMember.includes(selectedMember[i])} handleChange={handleChange} />)
+            items.push(<Card id={selectedMember[i].id} name={selectedMember[i].name} src={selectedMember[i].src} key={selectedMember[i].id} checked={selectedMember.includes(selectedMember[i])} handleChange={noop} />)
             :
             items.push(<EmptyCard key={i} />)
           }
