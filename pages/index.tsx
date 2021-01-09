@@ -22,9 +22,8 @@ const Home: React.FC = () => {
       <main className="container p-4 mx-auto">
         <section className="mb-6">
           <h1 className="text-center text-5xl font-bold mt-8 mb-4">
-            M-1 SELECT
+            SELECT UI
           </h1>
-          <h2 className="text-center text-xl tracking-wide text-gray-400">M-1敗者復活戦風のUIを作ってみる。Tailwindも使ってみるよ。</h2>
         </section>
         <section className="mb-6">
         <CardList val={val} handleChange={handleChange}></CardList>
