@@ -33,10 +33,19 @@ const useSelect = () => {
 
     const shuffledArray = shuffle(members).slice(1, CARD_NUM + 1)
     setSelectedMember(shuffledArray)
-
   },[])
 
-  return { selectedMember, handleChange, handleReset, handleRandom }
+  /** 送信 */
+  const handleSend = useCallback(() => {
+    let sendMessage = ""
+    selectedMember.forEach((item) => {
+      sendMessage += item.name + ", "
+    })
+    alert("select: " + sendMessage)
+    handleReset()
+  },[selectedMember])
+
+  return { selectedMember, handleChange, handleReset, handleRandom, handleSend }
 }
 
 export default useSelect

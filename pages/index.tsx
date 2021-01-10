@@ -6,16 +6,7 @@ import SelectedCardList from '../components/SelectedCardList'
 import useSelect, { CARD_NUM } from '../hooks/useSelect'
 
 const Home: React.FC = () => {
-  const { selectedMember, handleChange, handleReset, handleRandom } = useSelect()
-
-  const handleSend = useCallback(() => {
-    let sendMessage = ""
-    selectedMember.forEach((item) => {
-      sendMessage += item.name + ", "
-    })
-    alert("select: " + sendMessage)
-    handleReset()
-  },[selectedMember])
+  const { selectedMember, handleChange, handleReset, handleRandom, handleSend } = useSelect()
 
   return (
     <div>
