@@ -17,16 +17,16 @@ const Home: React.FC = () => {
 
       <main className="container p-4 mx-auto">
         <section className="mb-6">
-          <h1 className="text-center text-5xl font-bold mt-8 mb-4">
+          <h1 className="text-center">
             SELECT UI
           </h1>
         </section>
         <section className="mb-6">
-        <h2 className="mb-4 text-center font-bold text-xl">選択中</h2>
+        <h2 className="text-center">選択中</h2>
           <SelectedCardList selectedMember={selectedMember} handleChange={handleChange}></SelectedCardList>
         </section>
         <section className="mb-6">
-          <h2 className="mb-4 text-center font-bold text-xl">以下から選択</h2>
+          <h2 className="text-center">以下から選択</h2>
           <CardList selectedMember={selectedMember} handleChange={handleChange}></CardList>
         </section>
         <section className="flex justify-center">
