@@ -38,12 +38,12 @@ const Home: React.FC = () => {
             "sm:px-8": true,
             "py-2": true,
             "border": true,
+            "max-w-max": true,
+            "shadow-sm": true,
             "border-blue-300": selectedMember.length < CARD_NUM,
             "border-blue-600": selectedMember.length === CARD_NUM,
             "text-blue-300": selectedMember.length < CARD_NUM,
             "text-blue-600": selectedMember.length === CARD_NUM,
-            "max-w-max": true,
-            "shadow-sm": true,
             "hover:shadow-md": selectedMember.length === CARD_NUM,
             "cursor-not-allowed": selectedMember.length < CARD_NUM
           })}>送信</button>
