@@ -30,16 +30,10 @@ const Home: React.FC = () => {
           <CardList selectedMember={selectedMember} handleChange={handleChange}></CardList>
         </section>
         <section className="flex justify-center">
-          <button onClick={() => handleReset()} className="uppercase px-4 sm:px-8 py-2 mr-4 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">リセット</button>
-          <button onClick={() => handleRandom()} className="uppercase px-4 sm:px-8 py-2 mr-4 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md">ランダムでセット</button>
+          <button onClick={() => handleReset()} className="button">リセット</button>
+          <button onClick={() => handleRandom()} className="button">ランダムでセット</button>
           <button onClick={() => handleSend()} disabled={selectedMember.length < CARD_NUM} className={clsx({
-            "uppercase": true,
-            "px-4": true,
-            "sm:px-8": true,
-            "py-2": true,
-            "border": true,
-            "max-w-max": true,
-            "shadow-sm": true,
+            "button": true,
             "border-blue-300": selectedMember.length < CARD_NUM,
             "border-blue-600": selectedMember.length === CARD_NUM,
             "text-blue-300": selectedMember.length < CARD_NUM,

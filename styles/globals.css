@@ -10,3 +10,9 @@
     @apply mb-4 text-xl sm:text-2xl font-bold;
   }
 }
+
+@layer components {
+  .button {
+    @apply uppercase px-4 sm:px-8 py-2 mr-4 border border-blue-600 text-blue-600 max-w-max shadow-sm hover:shadow-md;
+  }
+}
