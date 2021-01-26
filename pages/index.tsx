@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <main className="container p-4 mx-auto">
         <section className="mb-6">
           <h1 className="text-center">
-            SELECT UI_AA
+            SELECT UI
           </h1>
         </section>
         <section className="mb-6">
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
           <SelectedCardList selectedMember={selectedMember} handleChange={handleChange}></SelectedCardList>
         </section>
         <section className="mb-6">
-          <h2 className="text-center">以下から選択してくださいです</h2>
+          <h2 className="text-center">以下から選択してください</h2>
           <CardList selectedMember={selectedMember} handleChange={handleChange}></CardList>
         </section>
         <section className="flex justify-center">
