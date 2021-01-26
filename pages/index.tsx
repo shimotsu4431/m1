@@ -20,6 +20,7 @@ const Home: React.FC = () => {
           <h1 className="text-center">
             SELECT UI
             <span>A</span>
+            <span>B</span>
           </h1>
         </section>
         <section className="mb-6">
