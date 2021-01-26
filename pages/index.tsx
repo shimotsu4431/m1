@@ -19,9 +19,6 @@ const Home: React.FC = () => {
         <section className="mb-6">
           <h1 className="text-center">
             SELECT UI
-            <span>A</span>
-            <span>B</span>
-            <span>C</span>
           </h1>
         </section>
         <section className="mb-6">
