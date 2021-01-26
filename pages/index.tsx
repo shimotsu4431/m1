@@ -26,7 +26,7 @@ const Home: React.FC = () => {
           <SelectedCardList selectedMember={selectedMember} handleChange={handleChange}></SelectedCardList>
         </section>
         <section className="mb-6">
-          <h2 className="text-center">以下から選択</h2>
+          <h2 className="text-center">以下から選択してください</h2>
           <CardList selectedMember={selectedMember} handleChange={handleChange}></CardList>
         </section>
         <section className="flex justify-center">
