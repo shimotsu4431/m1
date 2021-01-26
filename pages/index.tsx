@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <main className="container p-4 mx-auto">
         <section className="mb-6">
           <h1 className="text-center">
-            SELECT UIxxxxyyyy
+            SELECT UIxxxx
           </h1>
         </section>
         <section className="mb-6">
