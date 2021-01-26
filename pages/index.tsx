@@ -21,6 +21,7 @@ const Home: React.FC = () => {
             SELECT UI
             <span>A</span>
             <span>B</span>
+            <span>C</span>
           </h1>
         </section>
         <section className="mb-6">
