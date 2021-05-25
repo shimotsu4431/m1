@@ -1,11 +1,13 @@
-import { renderHook } from "@testing-library/react-hooks"
+import { renderHook,  } from "@testing-library/react-hooks"
+import useSelect, { UseSelectReturnType } from "../useSelect"
 
-describe('true is truthy and false is falsy', () => {
-  test('true is truthy', () => {
-    expect(true).toBe(true);
+describe('useSelect', () => {
+  const { result } = renderHook(() => useSelect())
+  test('selectedMember の初期値は空配列である', () => {
+    expect(result.current.selectedMember).toStrictEqual([]);
   });
 
-  test('false is falsy', () => {
-    expect(false).toBe(false);
-  });
+  test.todo('カードを選択したら、selectedMember に1枚登録される')
+  test.todo('ランダムで登録したら、selectedMember に3枚登録される')
+  test.todo('リセットしたら、selectedMember に3枚登録される')
 });

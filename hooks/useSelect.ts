@@ -5,7 +5,15 @@ import { member } from "../components/CardList";
 
 export const CARD_NUM = 3
 
-const useSelect = () => {
+export type UseSelectReturnType = {
+  selectedMember: member[];
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleReset: () => void;
+  handleRandom: () => void
+  handleSend: () => void
+};
+
+const useSelect = (): UseSelectReturnType => {
   const [selectedMember, setSelectedMember] = useState<member[]>([])
 
   /** カードを登録する */
