@@ -46,9 +46,7 @@ describe('useSelect', () => {
 
     act(() => {
       result.current.handleRandom()
-      window.alert = jest.fn()
       result.current.handleSend()
-
     })
 
     expect(result.current.selectedMember).toHaveLength(0);
