@@ -1,13 +1,29 @@
-import { renderHook,  } from "@testing-library/react-hooks"
+import { act, renderHook, RenderResult,  } from "@testing-library/react-hooks"
 import useSelect, { UseSelectReturnType } from "../useSelect"
 
+const mockDispatch = jest.fn();
+
 describe('useSelect', () => {
-  const { result } = renderHook(() => useSelect())
-  test('selectedMember の初期値は空配列である', () => {
-    expect(result.current.selectedMember).toStrictEqual([]);
+  let result: RenderResult<UseSelectReturnType>
+
+  beforeEach(() => {
+    result = renderHook(() => useSelect()).result
+  })
+  afterEach(() => {
+    mockDispatch.mockClear();
   });
 
-  test.todo('カードを選択したら、selectedMember に1枚登録される')
-  test.todo('ランダムで登録したら、selectedMember に3枚登録される')
-  test.todo('リセットしたら、selectedMember に3枚登録される')
+  test('selectedMember の初期値は空配列である', () => {
+    expect(result.current.selectedMember).toHaveLength(0);
+  });
+
+  test('ランダムで登録したら、selectedMember に3枚登録される', () => {
+    expect(result.current.selectedMember).toHaveLength(0);
+
+    act(() => {
+      result.current.handleRandom()
+    })
+
+    expect(result.current.selectedMember).toHaveLength(3);
+  });
 });
