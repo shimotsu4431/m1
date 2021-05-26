@@ -6,9 +6,12 @@ const mockDispatch = jest.fn();
 describe('useSelect', () => {
   let result: RenderResult<UseSelectReturnType>
 
+  // セットアップ
   beforeEach(() => {
     result = renderHook(() => useSelect()).result
   })
+
+  // 破棄
   afterEach(() => {
     mockDispatch.mockClear();
   });
@@ -25,5 +28,16 @@ describe('useSelect', () => {
     })
 
     expect(result.current.selectedMember).toHaveLength(3);
+  });
+
+  test('リセットしたら、selectedMember が空になる', () => {
+    expect(result.current.selectedMember).toHaveLength(0);
+
+    act(() => {
+      result.current.handleRandom()
+      result.current.handleReset()
+    })
+
+    expect(result.current.selectedMember).toHaveLength(0);
   });
 });
