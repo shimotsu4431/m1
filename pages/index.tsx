@@ -11,7 +11,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <Head>
-        <title>SELECT UIZZZ</title>
+        <title>SELECT UI</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
