@@ -49,7 +49,7 @@ const useSelect = (): UseSelectReturnType => {
     selectedMember.forEach((item) => {
       sendMessage += item.name + ", "
     })
-    alert("select: " + sendMessage)
+    console.log("select: " + sendMessage)
     handleReset()
   },[selectedMember])
 

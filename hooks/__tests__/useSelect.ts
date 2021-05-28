@@ -40,4 +40,15 @@ describe('useSelect', () => {
 
     expect(result.current.selectedMember).toHaveLength(0);
   });
+
+  test('送信したら、selectedMember が空になる', () => {
+    expect(result.current.selectedMember).toHaveLength(0);
+
+    act(() => {
+      result.current.handleRandom()
+      result.current.handleSend()
+    })
+
+    expect(result.current.selectedMember).toHaveLength(0);
+  });
 });
